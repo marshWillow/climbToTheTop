@@ -6,7 +6,7 @@
 
 大多数java程序员，最早就会接触jsp技术。然后我们会发现，修改jsp代码后，不需要重启jvm，只要刷新浏览器就行。可是，放到java代码中，修改，编译、替换class文件，发现新代码并没有生效。jsp为啥可以呢？
 
-![7fceed5036a40f4bd22ccf86629069c0118151.jpg](file:///C:\Users\H0137197\AppData\Local\Temp\msohtmlclip1\01\clip_image002.jpg)
+![7fceed5036a40f4bd22ccf86629069c0118151.jpg](..\png\clip_image001.jpg)
 
 jsp文件修改后，web容器会检查请求jsp文件是否被修改，如果修改过，就将jsp文件重新解析成一个新的sevlet类，并加载到jvm中。在java类加载机制中，同一个calssLoader类不允许重复，为了绕开这个限制，每次都会创建一个新的ClassLoader实例，之后请求会由新的servlet来处理。
 
