@@ -6,7 +6,7 @@
 
 大多数java程序员，最早就会接触jsp技术。然后我们会发现，修改jsp代码后，不需要重启jvm，只要刷新浏览器就行。可是，放到java代码中，修改，编译、替换class文件，发现新代码并没有生效。jsp为啥可以呢？
 
-![7fceed5036a40f4bd22ccf86629069c0118151.jpg](https://github.com/marshWillow/climbToTheTop/06-美团团队/png/clip_image001.jpg)
+![7fceed5036a40f4bd22ccf86629069c0118151.jpg](./png/clip_image001.jpg)
 
 jsp文件修改后，web容器会检查请求jsp文件是否被修改，如果修改过，就将jsp文件重新解析成一个新的sevlet类，并加载到jvm中。在java类加载机制中，同一个calssLoader类不允许重复，为了绕开这个限制，每次都会创建一个新的ClassLoader实例，之后请求会由新的servlet来处理。
 
@@ -54,7 +54,7 @@ BTrace是一个基于java开发的提供动态追踪服务的工具。至于BTra
 
 ​    Agent:基于java的Attach Api，动态附着在一个运行的jvm上，开启一个BTrace Server，接收Client发送的BTrace脚本，解析脚本，然后根据规则找到要修改的类，修改字节码后，调用java的reTransform接口，完成对对象行为的修改并使之生效。
 
-​    ![25f19ea854450ce3964d20ae778f621a178594.jpg](file:///C:\Users\H0137197\AppData\Local\Temp\msohtmlclip1\01\clip_image004.jpg)
+​    ![25f19ea854450ce3964d20ae778f621a178594.jpg](./png/clip_image004.jpg)
 
 BTrace有诸多限制，原则就是除了输出需要的信息，对整个程勋正常运行不造成影响。
 
