@@ -54,7 +54,7 @@ BTrace是一个基于java开发的提供动态追踪服务的工具。至于BTra
 
 ​    Agent:基于java的Attach Api，动态附着在一个运行的jvm上，开启一个BTrace Server，接收Client发送的BTrace脚本，解析脚本，然后根据规则找到要修改的类，修改字节码后，调用java的reTransform接口，完成对对象行为的修改并使之生效。
 
-​    ![25f19ea854450ce3964d20ae778f621a178594.jpg](./png/clip_image004.jpg)
+​    ![25f19ea854450ce3964d20ae778f621a178594.jpg](./png/clip_image003.jpg)
 
 BTrace有诸多限制，原则就是除了输出需要的信息，对整个程勋正常运行不造成影响。
 
